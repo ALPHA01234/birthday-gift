@@ -1,0 +1,267 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>For You, My Love ♡</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap');
+:root{--rose:#b74472;--deep:#69243f;--pink:#f8dce8;--cream:#fff8fb;--ink:#482333}
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden}body{background:#faedf3;color:var(--ink);font-family:"DM Sans",sans-serif;overflow:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:30px 30px;mix-blend-mode:soft-light;z-index:-2}
+.bg-glow{position:fixed;width:55vw;height:55vw;border-radius:50%;background:#ffd6e5;filter:blur(60px);opacity:.45;top:-15vw;left:-10vw;z-index:-3}.bg-glow.two{top:auto;left:auto;bottom:-20vw;right:-15vw;background:#ead5ff}
+.page{width:100vw;height:100vh;height:100dvh;padding:clamp(16px,4vw,42px);display:none;place-items:center;position:fixed;inset:0;overflow:hidden}
+.page.active{display:grid;animation:pagein .45s ease}
+@keyframes pagein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.card{width:min(900px,calc(100vw - 28px));max-height:calc(100dvh - 32px);overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;background:rgba(255,255,255,.72);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.85);border-radius:34px;box-shadow:0 30px 90px rgba(99,39,63,.16);padding:clamp(26px,5vw,60px);position:relative;margin:0 auto;scrollbar-width:thin;scrollbar-color:#d992ac transparent}
+.card::-webkit-scrollbar{width:6px}.card::-webkit-scrollbar-thumb{background:#e2a4bd;border-radius:10px}
+.card:after{content:"";position:absolute;inset:12px;border:1px dashed rgba(183,68,114,.18);border-radius:25px;pointer-events:none;z-index:1}
+.center{text-align:center;position:relative;z-index:2}.eyebrow{font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:#a55b77}.script{font-family:"Great Vibes",cursive;color:var(--rose);font-size:clamp(3rem,11vw,7rem);line-height:.9;margin:15px 0}.serif{font-family:"Cormorant Garamond",serif}.lead{font-size:clamp(1rem,2.5vw,1.25rem);line-height:1.8}.tiny{font-size:.82rem;color:#8d6272}.btn{padding:14px 24px;border-radius:999px;background:var(--rose);color:#fff;border:0;cursor:pointer;box-shadow:0 12px 30px #b7447233;transition:.25s;font-weight:600}.btn:hover{transform:translateY(-3px) scale(1.02)}.btn.light{background:#fff;color:var(--rose);border:1px solid #efc9d8}
+.hero-lilies{font-size:clamp(55px,13vw,105px);filter:drop-shadow(0 12px 18px #a83f6530);animation:sway 4s ease-in-out infinite}.hero-lilies span{display:inline-block}.hero-lilies span:nth-child(2){animation-delay:-1s}.hero-lilies span:nth-child(3){animation-delay:-2s}@keyframes sway{50%{transform:translateY(-8px) rotate(2deg)}}
+.lily-corner{position:absolute;font-size:70px;opacity:.6;animation:drift 5s ease-in-out infinite}.lily-corner.a{left:-8px;top:25px}.lily-corner.b{right:-10px;bottom:18px;animation-delay:-2s}.lily-corner.c{right:8%;top:10%;font-size:38px;animation-delay:-3s}@keyframes drift{50%{transform:translateY(-14px) rotate(-4deg)}}
+.floating{position:fixed;inset:0;pointer-events:none;z-index:10;overflow:hidden}.float{position:absolute;bottom:-50px;animation:rise linear forwards;opacity:.75}@keyframes rise{to{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+.notes{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}.note-btn{min-height:130px;border:1px solid #edc8d7;background:#fff7fa;border-radius:20px;color:#833957;font-size:1rem;cursor:pointer;transition:.25s;box-shadow:0 8px 20px #6c294315}.note-btn:hover{transform:translateY(-5px) rotate(-1deg)}.note-body{display:none;margin-top:18px;background:#fff;border-radius:20px;padding:24px;line-height:1.8;border:1px solid #efd5df}.note-body.show{display:block;animation:pop .35s}@keyframes pop{from{opacity:0;transform:scale(.97)}}
+.letter{margin-top:30px;background:#fffdfd;padding:28px;border-radius:4px;box-shadow:0 14px 30px #5e233412;line-height:1.9;position:relative}.letter:before{content:"";position:absolute;inset:12px;border:1px solid #f0dce4;pointer-events:none}
+.cake{font-size:110px;cursor:pointer;display:inline-block;filter:drop-shadow(0 12px 15px #8f385620);transition:.2s}.cake:hover{transform:scale(1.06)}.cake.off{filter:grayscale(.3);opacity:.75}.wish{display:none;margin-top:20px;font-size:1.25rem;color:var(--rose);line-height:1.7}.wish.show{display:block;animation:fadeup .7s}@keyframes fadeup{from{opacity:0;transform:translateY(15px)}}
+.final{font-family:"Cormorant Garamond",serif;font-size:clamp(1.35rem,4vw,2rem);line-height:1.7}.signature{font-family:"Great Vibes",cursive;font-size:2.4rem;color:var(--rose)}
+.music-toggle{position:fixed;right:18px;bottom:18px;z-index:50;width:52px;height:52px;border-radius:50%;background:#fff;color:var(--rose);border:1px solid #efcad8;box-shadow:0 12px 30px #64253d22;cursor:pointer;font-size:20px;display:grid;place-items:center}
+.back,.next{position:fixed;bottom:max(10px,env(safe-area-inset-bottom));z-index:50;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.9);color:#9a3f68;border:1px solid #efcad8;box-shadow:0 8px 22px #64253d1c;cursor:pointer;font-size:20px}
+.back{left:max(10px,env(safe-area-inset-left))}.next{right:max(78px,calc(env(safe-area-inset-right) + 78px))}
+@media(max-width:600px){.notes{grid-template-columns:1fr}.card{border-radius:25px}.card:after{inset:8px;border-radius:19px}}
+.envelope-wrap{display:grid;place-items:center;margin:28px auto 8px;min-height:240px}
+.envelope{width:min(360px,85vw);height:220px;position:relative;cursor:pointer;filter:drop-shadow(0 20px 25px #69243f22);transition:transform .3s}
+.envelope:hover{transform:translateY(-5px)}
+.env-back{position:absolute;inset:0;background:#e9a8c0;border-radius:10px;box-shadow:inset 0 0 0 1px #c67b9a}
+.env-paper{position:absolute;left:7%;right:7%;top:8%;height:84%;background:#fffdfd;border-radius:6px;padding:22px 20px;color:#693048;line-height:1.55;transform:translateY(4px);z-index:2;box-shadow:0 4px 12px #69243f14;overflow:hidden}
+.env-paper .paper-title{font-family:"Great Vibes",cursive;color:#a7436b;font-size:2rem}
+.env-left,.env-right{position:absolute;bottom:0;width:0;height:0;border-top:110px solid transparent;border-bottom:0 solid transparent;z-index:4}
+.env-left{left:0;border-right:180px solid #d989a8}.env-right{right:0;border-left:180px solid #d989a8}
+.env-flap{position:absolute;left:0;right:0;top:0;height:0;border-left:180px solid transparent;border-right:180px solid transparent;border-top:112px solid #f1b7cc;z-index:5;transform-origin:top;transition:transform .75s ease;filter:drop-shadow(0 2px 1px #b85d7d22)}
+.envelope.open .env-flap{transform:rotateX(180deg);z-index:1}
+.envelope.open .env-paper{animation:letterRise .9s ease forwards}
+@keyframes letterRise{from{transform:translateY(4px)}to{transform:translateY(-72px)}}
+.message-photo{width:min(270px,75vw);aspect-ratio:1/1;border:9px solid #fff;outline:1px solid #e8bdcf;margin:18px auto;background:linear-gradient(135deg,#f9dce8,#fff);display:grid;place-items:center;font-size:45px;box-shadow:0 14px 35px #69243f18;transform:rotate(-1.5deg)}
+.envelope-hint{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#9b5874;margin-top:8px}
+@media(max-width:600px){.env-left,.env-right{border-right-width:50%;border-left-width:50%}.env-flap{border-left-width:50%;border-right-width:50%}}
+
+@media(max-width:600px){
+ .page{padding:12px}
+ .card{width:calc(100vw - 24px);max-height:calc(100dvh - 24px);padding:18px 15px;border-radius:22px;overflow-y:auto;overflow-x:hidden}
+ .card:after{inset:7px;border-radius:16px}
+ .script{font-size:clamp(2.7rem,15vw,4.7rem)}
+ .lead{font-size:.92rem;line-height:1.45}
+ .final{font-size:1.18rem;line-height:1.45}
+ .hero-lilies{font-size:clamp(45px,16vw,75px)}
+ .lily-corner{font-size:42px}
+ .notes{gap:8px;margin-top:15px}
+ .note-btn{min-height:82px;padding:8px;font-size:.86rem}
+ .note-body{margin-top:10px;padding:13px;font-size:.88rem;line-height:1.45;max-height:150px;overflow:auto}
+ .letter{margin-top:14px;padding:18px;font-size:.88rem;line-height:1.45;max-height:47dvh;overflow:auto}
+ .envelope-wrap{min-height:170px;margin:12px auto 4px}
+ .envelope{width:min(310px,82vw);height:170px}
+ .env-left,.env-right{border-top-width:85px}
+ .env-flap{border-top-width:87px}
+ .env-paper{padding:15px;font-size:.78rem}
+ .message-photo{width:min(145px,42vw);font-size:25px;margin:10px auto}
+ .signature{font-size:1.8rem}
+ .cake{font-size:76px;margin:8px}
+ .wish{font-size:1rem;margin-top:10px}
+ .btn{padding:10px 17px;font-size:.88rem;margin-top:12px}
+ .back,.next,.music-toggle{width:36px;height:36px;font-size:16px}
+ .next{right:max(58px,calc(env(safe-area-inset-right) + 58px))}
+}
+</style></head><body>
+<div class="bg-glow"></div><div class="bg-glow two"></div><div class="floating" id="floating"></div>
+<audio id="music" loop preload="auto" src="assets/romantic-piano.mp3"></audio>
+
+<button class="back" onclick="go(-1)" aria-label="Previous">‹</button>
+<button class="next" onclick="go(1)" aria-label="Next">›</button>
+<button class="music-toggle" id="musicToggle" onclick="toggleMusic()" aria-label="Toggle music">🎵</button>
+
+<!-- PAGE 1: index -->
+<section class="page active" data-page="index">
+<div class="card center">
+<div class="lily-corner a">🌸</div><div class="lily-corner b">🌷</div><div class="lily-corner c">💗</div>
+<div class="eyebrow">31 August · made with love</div>
+<div class="hero-lilies"><span>🌸</span><span>🌷</span><span>🌸</span></div>
+<div class="eyebrow">for my favorite person</div>
+<h1 class="script">Happy Birthday</h1>
+<p class="lead serif">I didn't want to send you just a message.<br>I wanted to give you a little place filled with pieces of how I feel about you. ♡</p>
+<button class="btn" onclick="goTo('birthday')">Open your surprise ✨</button>
+</div>
+</section>
+
+<!-- PAGE 2: birthday -->
+<section class="page" data-page="birthday">
+<div class="card">
+<div class="lily-corner a">🌷</div><div class="lily-corner b">🌸</div>
+<div class="center"><div class="eyebrow">page one</div><h2 class="script">It's your day ♡</h2>
+<p class="lead serif">Your birthday is special to me for a very simple reason:</p>
+<p class="final"><b>because you are special to me.</b></p>
+<div class="hero-lilies" style="font-size:55px">🌸💗🌸</div>
+<p class="lead">And this is our <b>first birthday together.</b> 🥹</p>
+<button class="btn" onclick="goTo('notes')">Our little memories →</button></div>
+</div>
+</section>
+
+<!-- PAGE 3: notes -->
+<section class="page" data-page="notes">
+<div class="card">
+<div class="center"><div class="eyebrow">page three</div><h2 class="script">Just between us</h2>
+<p class="lead serif">Tap each little envelope. No numbering, no formal confessions — just things I wanted you to know. ❤️</p></div>
+
+<div class="notes">
+<button class="note-btn" onclick="showNote(0)">💌<br>A little truth</button>
+<button class="note-btn" onclick="showNote(1)">🌸<br>A little dua</button>
+<button class="note-btn" onclick="showNote(2)">❤️<br>Something from my heart</button>
+<button class="note-btn" onclick="showNote(3)">🎀<br>For our future moments</button>
+</div>
+<div id="noteBody" class="note-body"></div>
+<div class="center"><button class="btn" onclick="goTo('letter')">A letter for you →</button></div>
+</div>
+</section>
+
+<!-- PAGE 4: letter -->
+<section class="page" data-page="letter">
+<div class="card">
+<div class="lily-corner a">🌸</div><div class="lily-corner b">🌷</div>
+<div class="center"><div class="eyebrow">page four · just for you</div><h2 class="script">A birthday letter</h2>
+<p class="lead serif">Don't just read it… <b>open it.</b> 💌</p></div>
+
+<div class="envelope-wrap" id="envelopeWrap">
+<div class="envelope" id="envelope" onclick="openEnvelope()">
+<div class="env-back"></div>
+<div class="env-paper">
+<div class="paper-title">For my love ♡</div>
+<div>There's something I wanted to tell you on your special day…</div>
+</div>
+<div class="env-left"></div><div class="env-right"></div><div class="env-flap"></div>
+</div>
+</div>
+<div class="center">
+<div class="envelope-hint" id="envHint">tap the envelope to open it</div>
+</div>
+
+<div id="openedMessage" style="display:none">
+<div class="message-photo">🌸<br><span style="font-family:'DM Sans';font-size:12px">YOUR PHOTO HERE</span></div>
+<div class="letter">
+<p>Happy Birthday, meri jaan. ❤️</p>
+<p>If you ever wonder how special you are to me, just remember that somewhere in this world, there is someone who smiles a little more whenever your name appears on their screen.</p>
+<p>Allah hamesha tumhe khush rakhe, tumhari har dua qubool kare, tumhe har gham se door rakhe, aur tumhari zindagi ko sukoon, kamyabi aur bohat saari khushiyon se bhar de. 🤲🏻🌸</p>
+<p>Your smile is genuinely one of the most beautiful things to me. Please keep smiling like that. ❤️ You're much more important to me than you probably realize, and I'm really, really glad that it's you.</p>
+<p>Here's to our first birthday together… and hopefully many more birthdays, silly conversations, random laughs and beautiful memories waiting for us. 🫶🏻</p>
+<p class="signature">Always cheering for you ♡</p>
+</div>
+</div>
+<div class="center"><button class="btn" onclick="goTo('wish')">Make a wish 🎂</button></div>
+</div>
+</section>
+
+<!-- PAGE 5: wish -->
+<section class="page" data-page="wish">
+<div class="card center">
+<div class="hero-lilies">🌸🌷🌸</div>
+<div class="eyebrow">the birthday moment</div>
+<h2 class="script">Make a wish</h2>
+<p class="lead serif">Close your eyes for a second, make your wish, then tap the cake. ✨</p>
+<div class="cake" id="cake" onclick="makeWish()">🎂</div>
+<div class="wish" id="wish">Your wish is safe with me. 🤍<br><br>My wish for you is simple: <b>may Allah keep you happy, loved, safe and smiling.</b> 🤲🏻🌸</div>
+<button class="btn light" onclick="goTo('finale')">One last page →</button>
+</div>
+</section>
+
+<!-- PAGE 6: finale -->
+<section class="page" data-page="finale">
+<div class="card center">
+<div class="hero-lilies">🌸💗🌷💗🌸</div>
+<div class="eyebrow">the last page</div>
+<h2 class="script">For you</h2>
+<p class="final">I could keep writing forever, but I think you already know what I want you to know.</p>
+<p class="final"><b>You matter to me. A lot.</b> ❤️</p>
+<p class="lead serif">So smile today. Enjoy every little moment. And whenever you see a lily, I hope it reminds you that someone is very happy that you exist. 🌸</p>
+<p class="signature">Happy Birthday, my love. ♡</p>
+<p class="tiny">P.S. You can replay the music and read everything again. I made it for you.</p>
+</div>
+</section>
+
+<script>
+/* ---------- floating hearts ---------- */
+const floating=document.getElementById("floating");
+function burst(n=10){for(let i=0;i<n;i++){let e=document.createElement("div");e.className="float";e.textContent=["♡","♥","🌸","🌷","✨"][Math.floor(Math.random()*5)];e.style.left=Math.random()*100+"%";e.style.fontSize=(14+Math.random()*22)+"px";e.style.animationDuration=(5+Math.random()*6)+"s";floating.appendChild(e);setTimeout(()=>e.remove(),12000)}}
+setInterval(()=>burst(2),1800); burst(16);
+
+/* ---------- page navigation (single-page app, no reload) ---------- */
+const order=["index","birthday","notes","letter","wish","finale"];
+let current=0;
+function goTo(name){
+  const idx=order.indexOf(name);
+  if(idx===-1)return;
+  document.querySelector(`.page[data-page="${order[current]}"]`).classList.remove("active");
+  current=idx;
+  document.querySelector(`.page[data-page="${order[current]}"]`).classList.add("active");
+  burst(12);
+  location.hash=name;
+  window.scrollTo(0,0);
+}
+function go(dir){
+  const next=current+dir;
+  if(next<0||next>=order.length)return;
+  goTo(order[next]);
+}
+// deep-link support (optional): open on the page in the URL hash
+window.addEventListener("DOMContentLoaded",()=>{
+  const h=location.hash.replace("#","");
+  if(order.includes(h))goTo(h); else current=0;
+});
+
+/* ---------- notes page ---------- */
+const notes=[
+"I didn't expect you to become this important to me, but somehow you did. Now even the smallest things remind me of you, and honestly… I love that. ❤️",
+"Allah hamesha tumhe khush rakhe, tumhari har dua qubool kare, tumhe har gham se door rakhe, aur tumhari zindagi ko sukoon, kamyabi aur bohat saari khushiyon se bhar de. 🤲🏻🌸",
+"I love having you in my life. Your presence makes ordinary days feel different, and your smile can genuinely make my day better. You're more important to me than I can properly put into words. 🥹❤️",
+"I don't know what every future day will look like, but I hope there are many more birthdays, silly conversations, random laughs and beautiful memories for us to look back on together. 🫶🏻"
+];
+function showNote(i){let b=document.getElementById("noteBody");b.textContent=notes[i];b.classList.remove("show");void b.offsetWidth;b.classList.add("show");burst(8)}
+
+/* ---------- letter page ---------- */
+function openEnvelope(){
+ const env=document.getElementById("envelope"), msg=document.getElementById("openedMessage"), hint=document.getElementById("envHint"), wrap=document.getElementById("envelopeWrap");
+ if(!env.classList.contains("open")){
+   env.classList.add("open"); hint.textContent="opened with love ♡";
+   setTimeout(()=>{
+     // Collapse the envelope graphic out of the way so the letter always has room to show.
+     wrap.style.transition="max-height .5s ease, opacity .5s ease, margin .5s ease";
+     wrap.style.maxHeight="0px"; wrap.style.opacity="0"; wrap.style.margin="0"; wrap.style.overflow="hidden";
+     hint.style.display="none";
+     msg.style.display="block";
+     burst(18);
+     // Make sure the letter is actually scrolled into view, even on short screens.
+     setTimeout(()=>msg.scrollIntoView({behavior:"smooth",block:"start"}),80);
+   },800);
+ }
+}
+
+/* ---------- wish page ---------- */
+function makeWish(){document.getElementById("cake").classList.add("off");document.getElementById("wish").classList.add("show");burst(25)}
+
+/* ---------- MUSIC ----------
+   Single <audio> element that lives on this one page for its whole lifetime.
+   Since we never navigate to a new HTML document, playback is 100% continuous
+   across every "page" - no restart, no gap, no localStorage syncing needed. */
+const music=document.getElementById("music");
+const musicToggle=document.getElementById("musicToggle");
+music.volume=.100;
+
+function updateToggleIcon(){musicToggle.textContent = music.paused ? "🔇" : "🎵"}
+
+function tryPlay(){
+  music.play().then(updateToggleIcon).catch(()=>{
+    // Autoplay was blocked by the browser - it will start on first tap/click anywhere.
+    updateToggleIcon();
+  });
+}
+function toggleMusic(){
+  if(music.paused) tryPlay(); else { music.pause(); updateToggleIcon(); }
+}
+music.addEventListener("play",updateToggleIcon);
+music.addEventListener("pause",updateToggleIcon);
+
+window.addEventListener("load",tryPlay);
+// Fallback: if autoplay was blocked, the very first tap/click anywhere starts it.
+document.addEventListener("pointerdown",()=>{ if(music.paused) tryPlay(); },{once:true});
+</script>
+</body></html>
