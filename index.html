@@ -34,7 +34,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;ba
 .envelope.open .env-flap{transform:rotateX(180deg);z-index:1}
 .envelope.open .env-paper{animation:letterRise .9s ease forwards}
 @keyframes letterRise{from{transform:translateY(4px)}to{transform:translateY(-72px)}}
-.message-photo{width:min(270px,75vw);aspect-ratio:1/1;border:9px solid #fff;outline:1px solid #e8bdcf;margin:18px auto;background:linear-gradient(135deg,#f9dce8,#fff);display:grid;place-items:center;font-size:45px;box-shadow:0 14px 35px #69243f18;transform:rotate(-1.5deg)}
+.message-photo{width:min(270px,75vw);aspect-ratio:1/1;border:9px solid #fff;outline:1px solid #e8bdcf;margin:18px auto;background:linear-gradient(135deg,#f9dce8,#fff);display:grid;place-items:center;font-size:45px;box-shadow:0 14px 35px #69243f18;transform:rotate(-1.5deg)}.message-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .envelope-hint{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#9b5874;margin-top:8px}
 @media(max-width:600px){.env-left,.env-right{border-right-width:50%;border-left-width:50%}.env-flap{border-left-width:50%;border-right-width:50%}}
 
@@ -137,7 +137,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;ba
 </div>
 
 <div id="openedMessage" style="display:none">
-<div class="message-photo">🌸<br><span style="font-family:'DM Sans';font-size:12px"><img src="images1.png"></span></div>
+<div class="message-photo"><img src="images1.png" ></div>
 <div class="letter">
 <p>Happy Birthday, meri jaan. ❤️</p>
 <p>If you ever wonder how special you are to me, just remember that somewhere in this world, there is someone who smiles a little more whenever your name appears on their screen.</p>
