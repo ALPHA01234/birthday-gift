@@ -1,1 +1,0 @@
-const CACHE='dark-lord-v1';const FILES=['./','./index.html','./admin.html','./assets/styles.css','./assets/app.js','./assets/admin.js','./manifest.webmanifest'];self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
